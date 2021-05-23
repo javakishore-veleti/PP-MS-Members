@@ -15,10 +15,10 @@ import jk.pp.ms.commons.configs.MSType;
 @EntityScan(basePackages = { "jk.pp.ms.members.domain" })
 @EnableJpaRepositories(basePackages = { "jk.pp.ms.members.dao" })
 @Import(value = { MSCommonGlobalConfig.class })
-public class MemberWebMain {
+public class MembersWebMain {
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(MemberWebMain.class);
+		SpringApplication app = new SpringApplication(MembersWebMain.class);
 		app.setAdditionalProfiles(MSCommonGlobalConfig.buildAMSStartupProfiles(MSType.MEMBERS));
 
 		app.run(args);
